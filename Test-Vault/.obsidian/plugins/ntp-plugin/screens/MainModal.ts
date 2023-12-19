@@ -6,10 +6,12 @@ export class MainModal extends Modal {
   }
 
   onOpen(){
-    new ButtonComponent(this.containerEl)
-      .setButtonText("Sync Vault")
-      .onClick(() => {
-        // Starts the syncing process for this current vault
-      });
+    new ButtonComponent(this.modalEl)
+      .setButtonText("Sync Vault");
+  }
+
+  onClose(){
+    const {containerEl} = this;
+    containerEl.empty();
   }
 }
