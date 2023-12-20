@@ -6,8 +6,12 @@ export class MainModal extends Modal {
   }
 
   onOpen(){
+    // Button for syncing the vault
     new ButtonComponent(this.modalEl)
       .setButtonText("Sync Vault");
+    // Button for registering the vault
+    new ButtonComponent(this.modalEl)
+      .setButtonText("Register Vault");
   }
 
   onClose(){
